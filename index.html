@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="imgs/logo.PNG" type="image/x-icon">
+  <title>Custo Tech</title>
+  <!-- Link para o CSS do Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d7d3fd;">
+  <a class="navbar-brand" href="#" style="display: flex; align-items: center; margin-left: 10px;">
+    <img src="imgs/logo.PNG" alt="" style="height: 2.5em;">
+    <span style="margin-left: -11px; font-size: 21px; font-family:Noto Serif; font-weight: bold;">ustoTech</span>
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#produtos">Produtos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sobre">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#redesSociais">Contato</a>
+      </li>
+       <!-- Botão do Modo Escuro -->
+       <li class="nav-item">
+        <label class="switch" >
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label> 
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="button-container">
+  <button class="button" onclick="window.location.href='#'">
+    <svg
+      class="icon"
+      stroke="currentColor"
+      fill="currentColor"
+      stroke-width="0"
+      viewBox="0 0 1024 1024"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"
+      ></path>
+    </svg>
+  </button>
+  <button class="button" onclick="window.location.href='#produtos'">
+    <svg
+      class="icon"
+      stroke="currentColor"
+      fill="none"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path
+        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+      ></path>
+    </svg>
+  </button>
+  <button class="button" onclick="window.location.href='#sobre'">
+    <svg
+      class="icon"
+      stroke="currentColor"
+      fill="none"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+      ></path>
+    </svg>
+  </button>
+  <button class="button" onclick="window.location.href='#redesSociais'">
+    <svg
+      class="icon"
+      stroke="currentColor"
+      fill="currentColor"
+      stroke-width="0"
+      viewBox="0 0 24 24"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+
+<!-- Conteúdo da Página -->
+<div class="container mt-5">
+  <div class="jumbotron">
+    <h1 class="display-4">Bem-vindo ao Custo Tech</h1>
+    <p class="lead">Explore nossa coleção de produtos incríveis.</p>
+    <hr class="my-4">
+    <p>Clique no botão abaixo para ver nossos produtos.</p>
+    <a class="btn btn-dark btn-lg" href="#" role="button" style="color: #ffffff; background-color: #a7bfff57;">Ver Produtos</a>
+  </div>
+
+  <!-- Seção de Destaque de Produtos -->
+  <div class="row mb-5">
+    <div class="col-md-4 mb-4">
+      <div class="card" id="produtos">
+        <img src="produto1.jpg" class="card-img-top" alt="Produto 1">
+        <div class="card-body">
+          <h5 class="card-title">Produto 1</h5>
+          <p class="card-text">Descrição do Produto 1.</p>
+          <a href="#" class="btn btn-success">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="produto2.jpg" class="card-img-top" alt="Produto 2">
+        <div class="card-body">
+          <h5 class="card-title">Produto 2</h5>
+          <p class="card-text">Descrição do Produto 2.</p>
+          <a href="#" class="btn btn-success">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="produto3.jpg" class="card-img-top" alt="Produto 3">
+        <div class="card-body">
+          <h5 class="card-title">Produto 3</h5>
+          <p class="card-text">Descrição do Produto 3.</p>
+          <a href="#" class="btn btn-success">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="produto1.jpg" class="card-img-top" alt="Produto 4">
+        <div class="card-body">
+          <h5 class="card-title">Produto 4</h5>
+          <p class="card-text">Descrição do Produto 4.</p>
+          <a href="#" class="btn btn-success">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="produto2.jpg" class="card-img-top" alt="Produto 5">
+        <div class="card-body">
+          <h5 class="card-title">Produto 5</h5>
+          <p class="card-text">Descrição do Produto 5.</p>
+          <a href="#" class="btn btn-success">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="produto3.jpg" class="card-img-top" alt="Produto 6">
+        <div class="card-body">
+          <h5 class="card-title">Produto 6</h5>
+          <p class="card-text">Descrição do Produto 6.</p>
+          <a href="#" class="btn btn-success">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Espaçamento entre seções -->
+  <div class="row mb-5">
+    <div class="col-md-12">
+      <hr class="my-4">
+    </div>
+  </div>
+
+<!-- Seção sobre CustoTech -->
+<div class="container mt-5">
+  <div class="row" id="Sobre">
+    <div class="col-md-12">
+      <h1 id="sobre">Sobre:</h1><br>
+      <h2>Bem-vindo à CustoTech!</h2><br>
+      <p class="sobre">Na CustoTech, simplificamos sua busca pelos melhores produtos de tecnologia e periféricos. Nosso objetivo é oferecer uma plataforma intuitiva onde você possa encontrar os melhores preços de diferentes varejistas e ser redirecionado para a página do produto desejado, facilitando sua compra com confiança e conveniência. Acreditamos em transparência, confiabilidade e valor para nossos clientes. Explore nosso site e descubra como podemos facilitar sua experiência de compra. Obrigado por nos escolher como seu GPS de compras online.</p>
+      <p class="sobre mb-1">Atenciosamente, equipe <img src="imgs/logo.PNG" alt="" style="height: 2.5em;">CustoTech.</p>
+      <!-- Imagem -->
+      <div class="text-center mt-1"> <!-- Adicionando espaço superior à imagem -->
+        <img src="imgs/PC.png" alt="Descrição da imagem" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-light mt-5" id="redesSociais">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Receba nossas novidades</h5>
+        <p>Inscreva-se em nossa newsletter para receber atualizações sobre os últimos produtos e ofertas.</p>
+        <p>E-mail: custotech24@gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Links úteis</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#redesSociais">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Siga-nos nas redes sociais:</h5><br>
+        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<br><br>
+
+<!-- Scripts JavaScript do Bootstrap e Font Awesome -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

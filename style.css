@@ -1,0 +1,326 @@
+body{
+  background-color: #f8f9fa;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.sobre{
+  font-size: 18px;
+}
+
+.jumbotron{
+  background-color: #32387B;
+  color: #fff;
+}
+
+.navbar {
+  min-height: 10px; /* Defina a altura desejada aqui */
+}
+
+.navbar-custom {
+  background-color: #bebebe; /* Cor de fundo desejada */
+  color: #1c1c1f;
+}
+
+.btn-sm {
+  padding: 5px 8px; /* Ajuste o padding para alterar o tamanho do botão */
+  font-size: 14px; /* Altere o tamanho da fonte do botão */
+}
+
+
+/* Estilos para o Modo Escuro */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #333 !important;
+  }
+  
+  .dark-mode .navbar-nav .nav-link {
+    color: #fff !important;
+  }
+  
+  .dark-mode .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  
+  .dark-mode .navbar-nav .nav-link:hover {
+    color: #ccc !important;
+  }
+  
+  .dark-mode .btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+  
+  .dark-mode .btn-dark:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+  }
+  
+  .dark-mode .jumbotron {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  .dark-mode .card {
+    background-color: #343a40;
+    color: #fff;
+    border-color: #444;
+  }
+  
+  
+  .dark-mode .card-title {
+    color: #fff;
+  }
+  
+  .dark-mode .card-text {
+    color: #ccc;
+  }
+
+  .dark-mode .my-4 {
+    background-color: #cccccc33;
+  }
+  
+  .dark-mode .footer {
+    background-color: #333 !important;
+    color: #fff;
+  }
+  
+  .dark-mode .footer a {
+    color: #fff;
+  }
+  
+  .dark-mode .footer a:hover {
+    color: #ccc;
+  }
+  
+  .dark-mode .navbar-brand {
+    color: #fff !important;
+  }
+  
+  .dark-mode .footer .text-muted {
+    color: #fff;
+  }
+  
+
+/* BOTÃO DARK */
+
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 1.8em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    top: 5px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dbdbdb;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #1c1c1f;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+  /* Espaçamento no footer */
+  .footer {
+    background-color: #8f8e8e; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding-top: 30px; /* Espaçamento interno superior */
+    padding-bottom: 30px; /* Espaçamento interno inferior */
+    width: 100%; /* Largura total */
+    border-radius: 14px;
+  }
+  
+  .footer h5 {
+    color: #ffffff; /* Cor do título */
+  }
+  
+  .footer p {
+    font-size: 15px; /* Tamanho da fonte do parágrafo */
+    color: #fff;
+  }
+  
+  .footer ul {
+    list-style: none; /* Remover marcadores de lista */
+    padding-left: 0; /* Remover o recuo padrão */
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px; /* Espaçamento entre itens da lista */
+  }
+
+  .footer a {
+   text-decoration: none;
+   color: #fdfdfd;
+  }
+
+  .footer a:hover {
+    color: #4d4d4d; /* Cor dos ícones de redes sociais ao passar o mouse */
+  }
+  
+  .social-icon {
+    color: #ffffff; /* Cor dos ícones de redes sociais */
+    font-size: 20px; /* Tamanho dos ícones de redes sociais */
+    margin-right: 10px; /* Espaçamento entre os ícones */
+  
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Cor dos ícones de redes sociais ao passar o mouse */
+  }
+  
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px; /* Altere o tamanho da fonte para telas menores */
+  }
+  h2 {
+    font-size: 19px; /* Altere o tamanho da fonte para telas menores */
+  }
+  p {
+    font-size: 18px; /* Altere o tamanho da fonte para telas menores */
+  }
+  .sobre{
+    font-size: 18px; /* Altere o tamanho da fonte para telas menores */
+    text-align: justify;
+  }
+  .navbar-brand {
+    font-size: 24px; /* Ajuste o tamanho da fonte para telas menores */
+    font-weight: bold;
+  }
+  .display-4{
+   font-size: 24px;
+   font-weight: bold;
+  }
+ /* Estilo para a seção "Sobre" */
+#sobre {
+  padding: 20px;
+  background-color: #ebebebbd; /* Cor de fundo */
+  border-radius: 5px; /* Borda arredondada */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  text-align: justify;
+  
+}
+.dark-mode #sobre {
+  background-color: #2b2d30;
+}
+
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 8px 12px; /* Ajuste o padding para tornar o botão menor */
+    font-size: 16px; /* Ajuste o tamanho da fonte do botão para telas menores */
+  }
+}
+
+@media (min-width: 768px) {
+  .button-container, .button {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+.button-container {
+  position: fixed;
+  bottom: 40px; /* Distância menor da parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: rgb(46, 46, 46);
+  width: 250px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  z-index: 999; /* Garante que o container fique na frente */
+}
+.button-container {
+  /* Estilos do .button-container */
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 21px;
+}
+
+}
