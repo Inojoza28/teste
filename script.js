@@ -6,23 +6,19 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 
-// Grupo de botões responsivos
-window.addEventListener('scroll', function() {
-  var buttonContainer = document.querySelector('.button-container');
-  var scrolled = window.scrollY;
-  var windowHeight = window.innerHeight;
-  var documentHeight = document.body.clientHeight;
-  var scrollPosition = scrolled + windowHeight;
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+  });
+}
 
-  // Mostrar o .button-container após a primeira rolagem da tela
-  if (scrolled > 0) {
-    buttonContainer.style.display = 'flex';
+window.addEventListener('scroll', function () {
+  var scrollTopButton = document.querySelector('.scroll-top');
+  if (this.window.pageYOffset > 200) {
+      scrollTopButton.style.display = 'block';
   } else {
-    buttonContainer.style.display = 'none';
-  }
-
-  // Ocultar o .button-container quando o usuário atingir o final do site
-  if (scrollPosition >= documentHeight) {
-    buttonContainer.style.display = 'none';
+      scrollTopButton.style.display = 'none';
   }
 });
+
+

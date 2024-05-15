@@ -1,18 +1,16 @@
+/* ESTILOS GERAIS */
 body{
-  background-color: #f8f9fa;
+  background-color: #f8faf8;
 }
 
 html{
   scroll-behavior: smooth;
 }
-
+.jumbotron{
+  border-radius: 12px;
+}
 .sobre{
   font-size: 18px;
-}
-
-.jumbotron{
-  background-color: #32387B;
-  color: #fff;
 }
 
 .navbar {
@@ -27,6 +25,84 @@ html{
 .btn-sm {
   padding: 5px 8px; /* Ajuste o padding para alterar o tamanho do botão */
   font-size: 14px; /* Altere o tamanho da fonte do botão */
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1.25rem;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.card-img-top {
+  max-height: 450px; /* Defina a altura máxima desejada */
+  width: auto; /* Mantenha a largura automática para preservar a proporção */
+  object-fit: cover;
+}
+/* Estilos para os cards de destaque */
+.highlight-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Animação ao passar o mouse sobre os cards */
+.highlight-card:hover {
+  transform: translateY(-8px);
+}
+
+.scroll-top{
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: #ecc54e;
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  padding: 15px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  z-index: 999; /* Valor alto para garantir que fique na frente */
+}
+
+.scroll-top:hover{
+  border-color: #fff;
+  box-shadow: none;
 }
 
 
@@ -72,8 +148,12 @@ html{
     background-color: #343a40;
     color: #fff;
     border-color: #444;
+    box-shadow: 0 4px 8px rgba(243, 243, 243, 0.034);
   }
-  
+
+  .dark-mode .card:hover {
+    box-shadow: 0 8px 16px rgba(245, 245, 245, 0.2);
+  }
   
   .dark-mode .card-title {
     color: #fff;
@@ -107,7 +187,9 @@ html{
   .dark-mode .footer .text-muted {
     color: #fff;
   }
-  
+
+  /* Estilos para o Modo Escuro */
+
 
 /* BOTÃO DARK */
 
@@ -171,9 +253,11 @@ html{
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
   }
 
+/*FIM DO BOTÃO DARK */
+
   /* Espaçamento no footer */
   .footer {
-    background-color: #8f8e8e; /* Cor de fundo */
+    background-color: #292828; /* Cor de fundo */
     color: #ffffff; /* Cor do texto */
     padding-top: 30px; /* Espaçamento interno superior */
     padding-bottom: 30px; /* Espaçamento interno inferior */
@@ -218,7 +302,8 @@ html{
   .social-icon:hover {
     color: #007bff; /* Cor dos ícones de redes sociais ao passar o mouse */
   }
-  
+
+    /* fIM DO Espaçamento no footer */
 
 
 @media (max-width: 768px) {
@@ -256,6 +341,7 @@ html{
   background-color: #2b2d30;
 }
 
+
 }
 
 @media (max-width: 576px) {
@@ -265,62 +351,11 @@ html{
   }
 }
 
-@media (min-width: 768px) {
-  .button-container, .button {
-    display: none;
+
+@media screen and (max-width: 720px) {
+  
+.scroll-top{
+  font-size: 14px;
   }
-}
-
-
-@media (max-width: 768px) {
-
-.button-container {
-  position: fixed;
-  bottom: 40px; /* Distância menor da parte inferior */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  background-color: rgb(46, 46, 46);
-  width: 250px;
-  height: 50px;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 10px;
-  z-index: 999; /* Garante que o container fique na frente */
-}
-.button-container {
-  /* Estilos do .button-container */
-  display: none; /* Inicialmente oculto */
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-}
-
-.button {
-  outline: 0 !important;
-  border: 0 !important;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transition: all ease-in-out 0.3s;
-  cursor: pointer;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-}
-
-.icon {
-  font-size: 21px;
-}
 
 }
