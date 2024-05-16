@@ -115,6 +115,11 @@ html{
   .dark-mode .navbar {
     background-color: #333 !important;
   }
+
+  .dark-mode .burger span{
+    background-color: #f3f3f3 !important;
+ 
+  }
   
   .dark-mode .navbar-nav .nav-link {
     color: #fff !important;
@@ -360,6 +365,7 @@ html{
 
 }
 
+/* navbar-toggler */
 
 .burger {
   position: relative;
@@ -422,3 +428,5 @@ html{
   top: 21px;
   left: 5px;
 }
+
+/* Fim do navbar-toggler */
